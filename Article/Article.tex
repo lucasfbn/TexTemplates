@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\bibliography{references}
+
+\input{template/general_premble}
+\input{template/Article_premble}
+
+\title{Template}
+\author{None}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% If you want table of contents etc.
+% \pagestyle{headings}
+% \pagenumbering{roman}
+% \tableofcontents
+% \newpage
+% \listoffigures
+% \listoftables
+
+% \cleardoublepage%
+% \setcounter{page}{1}
+% \pagenumbering{arabic}
+
+\section{Template}
+Template Text
+
+\markdownInput{content/Article.md}
+
+\newpage
+\printbibliography
+\newpage
+
+\end{document}

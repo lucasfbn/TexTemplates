@@ -1,0 +1,40 @@
+\documentclass[conference]{IEEEtran}
+
+\input{template/general_premble}
+\input{template/IEEE_premble}
+
+\title{Title\\ {\footnotesize Subtitle}}
+
+\author{
+        \IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
+        \IEEEauthorblockA{  \textit{dept. name of organization (of Aff.)} \\
+                            \textit{name of organization (of Aff.)}\\
+                            City, Country \\
+                            email address or ORCID}
+        % When only one author, delete the next 6 lines (or copy the block when more than 2 authors)
+        \and
+        \IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+        \IEEEauthorblockA{  \textit{dept. name of organization (of Aff.)} \\
+                            \textit{name of organization (of Aff.)}\\
+                            City, Country \\
+                            email address or ORCID}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    Abstract. You can also use a separate md file for this.
+\end{abstract}
+
+\begin{IEEEkeywords}
+    Keywords, separated, by, comma
+\end{IEEEkeywords}
+
+\markdownInput{content/IEEE.md}
+
+\bibliographystyle{_settings/IEEEtran}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,84 @@
+%%%%%%%%%%%%
+%%% MATH %%%
+%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%
+%%% TYPOGRAPHY %%%
+%%%%%%%%%%%%%%%%%%
+
+% \usepackage[utf8]{inputenc} % for normal latex
+\usepackage[utf8]{luainputenc} % for lualatex
+\usepackage{abstract} % Easier abstract
+\usepackage{fancyhdr} % Customize footer and header
+\usepackage{csquotes} % Nicer quotes
+
+%%% LANGUAGE %%%
+\usepackage[english]{babel} % English
+% \usepackage[english, ngerman]{babel} % English & German
+
+% IF writting in german, uncomment the following two lines:
+% \usepackage{lmodern} % Preserve font
+% \usepackage[T1]{fontenc} % Better hyphenation (for german)
+
+%%% HYPERLINKS %%%
+\usepackage[hidelinks]{hyperref} % Links
+\hypersetup{ % Links in table of contents
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+
+%%% PARAGRAPH SETTINGS %%%
+% \setlength{\parindent}{0pt} % No intendiation after new paragraph
+
+%%% FOOTNOTES SETTINGS %%%
+% \counterwithout{footnote}{chapter} % Continuous footnote count
+
+%%%%%%%%%%%%
+%%% TYKZ %%%
+%%%%%%%%%%%%
+
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%
+%%% TABLES %%%
+%%%%%%%%%%%%%%
+\usepackage{booktabs} % Nicer table
+\usepackage{longtable} % Table over several pages
+\usepackage{makecell} % Cells within table
+\usepackage{multirow} % Multirows-/cols
+\usepackage{bigdelim} % I forgot :D
+\usepackage{float} % Table/Figures positioning
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MARKDOWN HANDLING %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[fencedCode,inlineFootnotes,citations,definitionLists,hashEnumerators,smartEllipses,
+  pipeTables,tableCaptions,contentBlocks, hybrid, underscores=false]{markdown}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% IMAGE HANDLING %%%
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+\newcommand{\img}[4]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1\linewidth,totalheight=\textheight,keepaspectratio]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+%%%%%%%%%%%%%
+%%% OTHER %%%
+%%%%%%%%%%%%%
+
+\usepackage{lipsum} % Can be used to easily generate lorem ipsum texts
