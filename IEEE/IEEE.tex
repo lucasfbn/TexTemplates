@@ -1,7 +1,9 @@
+\RequirePackage[OT1]{fontenc}
 \documentclass[conference]{IEEEtran}
 
 \input{template/general_premble}
-\input{template/IEEE_premble}
+\input{template/custom}
+\bibliography{references}
 
 \title{Title\\ {\footnotesize Subtitle}}
 
@@ -25,16 +27,15 @@
 \maketitle
 
 \begin{abstract}
-    Abstract. You can also use a separate md file for this.
+    \markdownInput{content/abstract.md}
 \end{abstract}
 
 \begin{IEEEkeywords}
     Keywords, separated, by, comma
 \end{IEEEkeywords}
 
-\markdownInput{content/IEEE.md}
+\markdownInput{content/body.md}
 
-\bibliographystyle{template/IEEEtran}
-\bibliography{references}
+\printbibliography
 
 \end{document}
