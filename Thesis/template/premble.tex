@@ -1,0 +1,113 @@
+%%%%%%%%%%%%
+%%% MATH %%%
+%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%
+%%% TYPOGRAPHY %%%
+%%%%%%%%%%%%%%%%%%
+
+% \usepackage[utf8]{inputenc} % for normal latex
+\usepackage[utf8]{luainputenc} % for lualatex
+\usepackage{abstract} % Easier abstract
+\usepackage{fancyhdr} % Customize footer and header
+\usepackage{csquotes} % Nicer quotes
+
+%%% LANGUAGE %%%
+\usepackage[english]{babel} % English
+% \usepackage[english, ngerman]{babel} % English & German
+
+% IF writting in german, uncomment the following two lines:
+% \usepackage{lmodern} % Preserve font
+% \usepackage[T1]{fontenc} % Better hyphenation (for german)
+
+%%% HYPERLINKS %%%
+\usepackage[hidelinks]{hyperref} % Links
+\hypersetup{ % Links in table of contents
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+
+%%% PARAGRAPH SETTINGS %%%
+% \setlength{\parskip}{0.3em} % Space between paragraphs
+% \setlength{\parindent}{0pt} % No intendiation after new paragraph
+
+%%% FOOTNOTES SETTINGS %%%
+% \counterwithout{footnote}{chapter} % Continuous footnote count
+
+%%%%%%%%%%%%
+%%% TYKZ %%%
+%%%%%%%%%%%%
+
+\usepackage{tikz}
+
+%%%%%%%%%%%%%%
+%%% TABLES %%%
+%%%%%%%%%%%%%%
+\usepackage{booktabs} % Nicer table
+\usepackage{longtable} % Table over several pages
+\usepackage{makecell} % Cells within table
+\usepackage{multirow} % Multirows-/cols
+\usepackage{bigdelim} % I forgot :D
+\usepackage{float} % Table/Figures positioning
+% \usepackage{ltables} % Combines tabularx and longtable
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% MARKDOWN HANDLING %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[fencedCode,inlineFootnotes,citations,definitionLists,hashEnumerators,smartEllipses,
+  pipeTables,tableCaptions,contentBlocks, hybrid, underscores=false]{markdown}
+\markdownSetup{rendererPrototypes={
+    link = {#2},
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%%% IMAGE HANDLING %%%
+%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+
+\newcommand{\img}[4]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1\linewidth,totalheight=\textheight,keepaspectratio]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}
+}
+
+%%%%%%%%%%%%%
+%%% OTHER %%%
+%%%%%%%%%%%%%
+
+\usepackage{lipsum} % Can be used to easily generate lorem ipsum texts
+
+%%%%%%%%%%%%%%
+%%% CITING %%%
+%%%%%%%%%%%%%%
+
+\usepackage[maxnames=3,doi=false, isbn=false,natbib,sorting=none,url=false,giveninits=true,style=ieee]{biblatex} 
+% To enable autocite: autocite=footnote %%%
+
+% Use shortcuts for citing
+\newcommand{\ac}{\autocite}
+\newcommand{\acv}{\autocite[vgl.]}
+
+% Swap dates from 01.01.2021 to 2021-01-01
+\DeclareSourcemap{
+    \maps{
+        \map[overwrite]{
+            \step[fieldsource=urldate,
+            match=\regexp{([0-9]{2})\.([0-9]{2})\.([0-9]{4})},
+            replace={$3-$2-$1},
+            final]
+        }
+    }
+}
